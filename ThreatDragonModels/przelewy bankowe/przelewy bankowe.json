@@ -60,8 +60,8 @@
                 "text": "Klient banku"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -158,25 +158,11 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "a757172a-7814-40f9-8aac-0a81f4eb6517",
-                  "title": "podszywanie się pod klienta",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Spoofing",
-                  "description": "Atakujący może podszyć się pod klienta (spoofing), zamawiając w jego imieniu historię transakcji powyżej 30 dni. Jeśli system bankowy nie zweryfikuje poprawnie tożsamości, oszust uzyska dostęp do pełnej historii operacji i wrażliwych danych finansowych ofiary. ",
-                  "mitigation": "Wdrożyć silną autoryzację i weryfikację tożsamości klienta (np. dwuskładnikową – 2FA) przy każdym żądaniu generowania historii powyżej 30 dni oraz rygorystycznie sprawdzać uprawnienia do pobieranego pliku na backendzie.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 1,
-                  "score": ""
-                }
-              ],
+              "threats": [],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 0,
                 "repudiation": 0
               }
             }
@@ -355,7 +341,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -376,13 +363,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "037a17c0-1704-40a9-84b4-124d2700ba39",
+                  "title": "Wstrzyknięcie kodu SQL (SQL Injection) w parametrach daty",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Użytkownik podaje w formularzu niestandardowe zakresy dat lub złośliwy ciąg znaków  Jeśli \"generator pdf\" nie czyści tych danych wejściowych, wstrzykuje je prosto do zapytania do bazy danych. Prowadzi to do modyfikacji lub usunięcia historycznych rekordów z Cold Storage.",
+                  "mitigation": "Zastosowanie parametryzowanych zapytań (Prepared Statements) w module generator pdf do komunikacji z bazą.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Zapytanie SQL o stare transakcje"
@@ -404,6 +410,10 @@
               {
                 "x": 1000,
                 "y": 380
+              },
+              {
+                "x": 1000,
+                "y": 360
               }
             ]
           },
@@ -665,7 +675,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -686,13 +697,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "13d0f7df-25fe-40eb-9652-eef40fe44f84",
+                  "title": "Nieautoryzowany dostęp do pliku przez przewidywalny link",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Backend zwraca link do wygenerowanego pliku PDF. Jeśli ten link prowadzi do publicznego endpointu i ma łatwą do odgadnięcia strukturę , atakujący może generować numery w pętli i pobierać pliki finansowe innych użytkowników, ponieważ system nie weryfikuje tokenu sesyjnego podczas samego kliknięcia w link.",
+                  "mitigation": "Magazyn plików nie może być publiczny. Backend musi generować jednorazowe, kryptograficznie podpisane, krótkotrwałe linki (np. ważne 5 minut), które są przypisane do sesji żądającego.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Przekazanie linku do pliku"
@@ -709,15 +739,23 @@
             "vertices": [
               {
                 "x": 390,
-                "y": 330
+                "y": 340
               },
               {
                 "x": 390,
-                "y": 300
+                "y": 280
               },
               {
                 "x": 400,
                 "y": 260
+              },
+              {
+                "x": 400,
+                "y": 220
+              },
+              {
+                "x": 420,
+                "y": 190
               }
             ]
           },
@@ -779,7 +817,7 @@
           },
           {
             "position": {
-              "x": 350,
+              "x": 360,
               "y": 350
             },
             "size": {
@@ -1436,26 +1474,13 @@
                   "new": false,
                   "number": 2,
                   "score": ""
-                },
-                {
-                  "id": "16caeaff-c88e-420c-8b0d-4cf41c313f52",
-                  "title": "Problemy aplikacji",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Information disclosure",
-                  "description": "Frontend aplikacji może zapisać pobrany plik z historią transakcji w niebezpiecznym miejscu (np. w pamięci podręcznej przeglądarki lub nieszyfrowanym folderze urządzenia), umożliwiając złośliwemu oprogramowaniu lub osobom trzecim wgląd w dane finansowe klienta.",
-                  "mitigation": " Wymusić czyszczenie pamięci podręcznej (Cache-Control: no-store), przetwarzać dane wyciągu wyłącznie w bezpiecznej pamięci operacyjnej aplikacji, a w przypadku aplikacji mobilnych – blokować możliwość robienia zrzutów ekranu podczas wyświetlania historii.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 1,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
@@ -1513,6 +1538,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 5
+    "threatTop": 7
   }
 }
