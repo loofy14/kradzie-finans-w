@@ -307,6 +307,196 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Żądanie weryfikacji kodu F2A",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Żądanie weryfikacji kodu F2A"
+            ],
+            "id": "140380c0-009b-4816-b941-1fe34f3a76d3",
+            "source": {
+              "cell": "9a3681ba-831a-4bec-a8f2-8f2e7cc5bb2a",
+              "port": "471f60cd-0e78-4383-a2da-c3ddc1970ca5"
+            },
+            "target": {
+              "cell": "fc7198f9-2d9c-4f2d-bdaf-5b36ea12a170",
+              "port": "3904cbb4-b302-455f-9547-328b354c2acb"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Zlecenie wygenerowania",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Zlecenie wygenerowania"
+            ],
+            "id": "614bad51-e3b8-455a-9fed-3888ac71fcb8",
+            "source": {
+              "cell": "8bdf0596-7f56-4753-9e9c-64f18a22d0d8",
+              "port": "a60bcf4f-fabd-426a-89d8-246fb17d5d3f"
+            },
+            "target": {
+              "cell": "fb11fb8f-9f90-4d8f-872f-662a177231a2",
+              "port": "3904cbb4-b302-455f-9547-328b354c2acb"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Zapytanie SQL o stare transakcje",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Zapytanie SQL o stare transakcje"
+            ],
+            "id": "61185981-ccbd-4a0f-852b-e064ab9e7d93",
+            "source": {
+              "cell": "fb11fb8f-9f90-4d8f-872f-662a177231a2",
+              "port": "7c0ca4c2-330d-41ed-b682-18e30ff58da1"
+            },
+            "target": {
+              "cell": "de2b386e-07fe-43ad-b00a-a61943307e62",
+              "port": "260c5e81-bbe0-4d7e-8183-2326179aa185"
+            },
+            "vertices": [
+              {
+                "x": 970,
+                "y": 405
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Zapis gotowego pliku pdf",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Zapis gotowego pliku pdf"
+            ],
+            "id": "0cee7436-95d8-4a9d-b841-5d00723b1abf",
+            "source": {
+              "cell": "fb11fb8f-9f90-4d8f-872f-662a177231a2",
+              "port": "1a5c2f20-86c6-4d6f-af59-01b8dd2f2118"
+            },
+            "target": {
+              "cell": "0190fb61-ec40-4b9f-be69-7975a4009c08",
+              "port": "a78dc57a-6f96-4e19-9bf6-e0637d1583f8"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Data Flow",
               "description": "",
               "outOfScope": false,
@@ -323,21 +513,20 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "bad3ab4a-674b-4a7a-ace8-8009d05cdc6d",
+            "id": "41c29e57-e630-44c5-b94f-fd286361a9d1",
             "source": {
-              "cell": "9a3681ba-831a-4bec-a8f2-8f2e7cc5bb2a",
-              "port": "471f60cd-0e78-4383-a2da-c3ddc1970ca5"
+              "cell": "09e2562a-0dfe-49b9-8147-a8eca9818aa3",
+              "port": "7d968a91-48ca-4879-8d5d-9bb578130277"
             },
             "target": {
-              "cell": "fc7198f9-2d9c-4f2d-bdaf-5b36ea12a170",
+              "cell": "9a3681ba-831a-4bec-a8f2-8f2e7cc5bb2a",
               "port": "3904cbb4-b302-455f-9547-328b354c2acb"
-            },
-            "vertices": []
+            }
           },
           {
             "position": {
               "x": 360,
-              "y": 250.00000000000023
+              "y": 380.0000000000002
             },
             "size": {
               "width": 220,
@@ -478,6 +667,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -561,7 +751,6 @@
               ]
             },
             "id": "0190fb61-ec40-4b9f-be69-7975a4009c08",
-            "zIndex": 13,
             "data": {
               "type": "tm.Store",
               "name": "Zabezpieczony magazyn plików",
@@ -580,7 +769,7 @@
           },
           {
             "position": {
-              "x": 765,
+              "x": 785,
               "y": 10
             },
             "size": {
@@ -599,6 +788,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -682,7 +872,6 @@
               ]
             },
             "id": "fc7198f9-2d9c-4f2d-bdaf-5b36ea12a170",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
               "name": "serwis uwierzytelniania",
@@ -700,8 +889,8 @@
           },
           {
             "position": {
-              "x": 785,
-              "y": 275.0000000000002
+              "x": 685,
+              "y": 240
             },
             "size": {
               "width": 110,
@@ -719,6 +908,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -802,7 +992,6 @@
               ]
             },
             "id": "fb11fb8f-9f90-4d8f-872f-662a177231a2",
-            "zIndex": 15,
             "data": {
               "type": "tm.Process",
               "name": "generator pdf",
@@ -821,7 +1010,7 @@
           {
             "position": {
               "x": 360,
-              "y": 0
+              "y": -40
             },
             "size": {
               "width": 200,
@@ -839,6 +1028,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -922,7 +1112,6 @@
               ]
             },
             "id": "9a3681ba-831a-4bec-a8f2-8f2e7cc5bb2a",
-            "zIndex": 16,
             "data": {
               "type": "tm.Process",
               "name": "Aplikacja bankowa frontend",
@@ -936,6 +1125,52 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 17,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "111ac4e4-b88c-4f15-ae41-e06cf75e2389",
+            "source": {
+              "x": 440,
+              "y": 230
+            },
+            "target": {
+              "cell": "8bdf0596-7f56-4753-9e9c-64f18a22d0d8",
+              "port": "72146b70-b66f-4f7a-babd-52e7f481fd9b"
             }
           }
         ]
