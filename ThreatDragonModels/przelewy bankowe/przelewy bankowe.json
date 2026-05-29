@@ -174,7 +174,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Aplikacja bankowa"
+                "text": "Aplikacja bankowa frontend"
               },
               "body": {
                 "stroke": "#333333",
@@ -270,7 +270,7 @@
             "id": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
             "data": {
               "type": "tm.Process",
-              "name": "Aplikacja bankowa",
+              "name": "Aplikacja bankowa frontend",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -473,6 +473,182 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Zwrócenie rekordów z bazy",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Zwrócenie rekordów z bazy"
+            ],
+            "id": "22217be2-ddb4-41c3-b35f-45ef1558b30d",
+            "source": {
+              "cell": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
+              "port": "1d4001dd-7c0a-4148-9354-939c62017fe5"
+            },
+            "target": {
+              "cell": "de2b386e-07fe-43ad-b00a-a61943307e62",
+              "port": "6b34ad9e-4307-4ba1-b7c6-9cb9d070d8f0"
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 50
+              },
+              {
+                "x": 780,
+                "y": 70
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 455,
+              "y": 260
+            },
+            "size": {
+              "width": 110,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": " Aplikacja bankowa Backend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "72146b70-b66f-4f7a-babd-52e7f481fd9b"
+                },
+                {
+                  "group": "right",
+                  "id": "a60bcf4f-fabd-426a-89d8-246fb17d5d3f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "55751535-3f3a-41a5-87d2-4cf23f4852fa"
+                },
+                {
+                  "group": "left",
+                  "id": "8e16b8fe-935c-4177-b479-c3327ee540ea"
+                }
+              ]
+            },
+            "id": "8bdf0596-7f56-4753-9e9c-64f18a22d0d8",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": " Aplikacja bankowa Backend",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 12,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Zapytanie SQL o stare transakcje",
               "description": "",
               "outOfScope": false,
@@ -495,61 +671,15 @@
               "port": "8a516602-fa0c-42cf-9317-95748a5f9138"
             },
             "target": {
-              "cell": "de2b386e-07fe-43ad-b00a-a61943307e62",
-              "port": "260c5e81-bbe0-4d7e-8183-2326179aa185"
+              "cell": "8bdf0596-7f56-4753-9e9c-64f18a22d0d8",
+              "port": "72146b70-b66f-4f7a-babd-52e7f481fd9b"
             },
             "vertices": [
               {
-                "x": 660,
-                "y": 105
+                "x": 640,
+                "y": 160
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "22217be2-ddb4-41c3-b35f-45ef1558b30d",
-            "source": {
-              "x": 640,
-              "y": 20
-            },
-            "target": {
-              "x": 910,
-              "y": 180
-            }
           }
         ]
       }
