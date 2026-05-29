@@ -66,6 +66,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -149,7 +150,6 @@
               ]
             },
             "id": "09e2562a-0dfe-49b9-8147-a8eca9818aa3",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Klient banku",
@@ -183,6 +183,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -266,7 +267,6 @@
               ]
             },
             "id": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Aplikacja bankowa",
@@ -306,6 +306,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -389,7 +390,6 @@
               ]
             },
             "id": "de2b386e-07fe-43ad-b00a-a61943307e62",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Baza danych",
@@ -426,7 +426,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Żądanie pobrania historii",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -440,16 +440,126 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Żądanie pobrania historii"
             ],
             "id": "c7a82e97-d62f-4107-9873-168b59d2943c",
             "source": {
-              "x": 150,
-              "y": 160
+              "cell": "09e2562a-0dfe-49b9-8147-a8eca9818aa3",
+              "port": "7d968a91-48ca-4879-8d5d-9bb578130277"
             },
             "target": {
               "cell": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
               "port": "00711b93-c413-44ac-afce-e7ac400b3692"
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           }
         ]
