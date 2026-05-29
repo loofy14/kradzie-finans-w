@@ -1368,7 +1368,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Żądanie wygenerowania transakcji",
+              "name": "Żądanie wygenerowania raportu",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1382,7 +1382,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Żądanie wygenerowania transakcji"
+              "Żądanie wygenerowania raportu"
             ],
             "id": "f1ff26ad-8294-4000-944a-ebc1210ce0f3",
             "source": {
