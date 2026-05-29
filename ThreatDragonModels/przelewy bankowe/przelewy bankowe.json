@@ -165,128 +165,8 @@
           },
           {
             "position": {
-              "x": 450,
-              "y": 50
-            },
-            "size": {
-              "width": 120,
-              "height": 110
-            },
-            "attrs": {
-              "text": {
-                "text": "Aplikacja bankowa frontend"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 2,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "1d4001dd-7c0a-4148-9354-939c62017fe5"
-                },
-                {
-                  "group": "right",
-                  "id": "8a516602-fa0c-42cf-9317-95748a5f9138"
-                },
-                {
-                  "group": "bottom",
-                  "id": "c3c5347c-a281-483b-9c0f-5d5abc7d63b0"
-                },
-                {
-                  "group": "left",
-                  "id": "00711b93-c413-44ac-afce-e7ac400b3692"
-                }
-              ]
-            },
-            "id": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
-            "data": {
-              "type": "tm.Process",
-              "name": "Aplikacja bankowa frontend",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": 720,
-              "y": 180
+              "x": 1050,
+              "y": 270
             },
             "size": {
               "width": 120,
@@ -294,7 +174,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Baza danych"
+                "text": "Baza danych archiwalnych"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -393,7 +273,7 @@
             "id": "de2b386e-07fe-43ad-b00a-a61943307e62",
             "data": {
               "type": "tm.Store",
-              "name": "Baza danych",
+              "name": "Baza danych archiwalnych",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -427,7 +307,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Żądanie pobrania historii",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -441,82 +321,27 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Żądanie pobrania historii"
+              "Data Flow"
             ],
-            "id": "c7a82e97-d62f-4107-9873-168b59d2943c",
+            "id": "bad3ab4a-674b-4a7a-ace8-8009d05cdc6d",
             "source": {
-              "cell": "09e2562a-0dfe-49b9-8147-a8eca9818aa3",
-              "port": "7d968a91-48ca-4879-8d5d-9bb578130277"
+              "cell": "9a3681ba-831a-4bec-a8f2-8f2e7cc5bb2a",
+              "port": "471f60cd-0e78-4383-a2da-c3ddc1970ca5"
             },
             "target": {
-              "cell": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
-              "port": "00711b93-c413-44ac-afce-e7ac400b3692"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
+              "cell": "fc7198f9-2d9c-4f2d-bdaf-5b36ea12a170",
+              "port": "3904cbb4-b302-455f-9547-328b354c2acb"
             },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Zwrócenie rekordów z bazy",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Zwrócenie rekordów z bazy"
-            ],
-            "id": "22217be2-ddb4-41c3-b35f-45ef1558b30d",
-            "source": {
-              "cell": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
-              "port": "1d4001dd-7c0a-4148-9354-939c62017fe5"
-            },
-            "target": {
-              "cell": "de2b386e-07fe-43ad-b00a-a61943307e62",
-              "port": "6b34ad9e-4307-4ba1-b7c6-9cb9d070d8f0"
-            },
-            "vertices": [
-              {
-                "x": 720,
-                "y": 50
-              },
-              {
-                "x": 780,
-                "y": 70
-              }
-            ]
+            "vertices": []
           },
           {
             "position": {
-              "x": 455,
-              "y": 260
+              "x": 360,
+              "y": 250.00000000000023
             },
             "size": {
-              "width": 110,
-              "height": 100
+              "width": 220,
+              "height": 180
             },
             "attrs": {
               "text": {
@@ -530,6 +355,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -613,7 +439,6 @@
               ]
             },
             "id": "8bdf0596-7f56-4753-9e9c-64f18a22d0d8",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": " Aplikacja bankowa Backend",
@@ -630,56 +455,488 @@
             }
           },
           {
-            "shape": "flow",
+            "position": {
+              "x": 1050,
+              "y": 140
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
             "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
+              "text": {
+                "text": "Zabezpieczony magazyn plików"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
-            "width": 200,
-            "height": 100,
-            "zIndex": 12,
-            "connector": "smooth",
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "ed42417b-71db-48e3-a718-8ba0cc7b2ba2"
+                },
+                {
+                  "group": "right",
+                  "id": "13912549-1e9c-4228-b420-f9ba4246328f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "d9dbc4e8-9925-4bc6-b21e-26ac883bd5d0"
+                },
+                {
+                  "group": "left",
+                  "id": "a78dc57a-6f96-4e19-9bf6-e0637d1583f8"
+                }
+              ]
+            },
+            "id": "0190fb61-ec40-4b9f-be69-7975a4009c08",
+            "zIndex": 13,
             "data": {
-              "type": "tm.Flow",
-              "name": "Zapytanie SQL o stare transakcje",
+              "type": "tm.Store",
+              "name": "Zabezpieczony magazyn plików",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isALog": false,
               "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 765,
+              "y": 10
             },
-            "labels": [
-              "Zapytanie SQL o stare transakcje"
-            ],
-            "id": "e8b7385e-8fe4-4383-845c-585b358bbb06",
-            "source": {
-              "cell": "43dc0b3d-6673-48c9-b462-dd8c48dea57d",
-              "port": "8a516602-fa0c-42cf-9317-95748a5f9138"
+            "size": {
+              "width": 180,
+              "height": 150
             },
-            "target": {
-              "cell": "8bdf0596-7f56-4753-9e9c-64f18a22d0d8",
-              "port": "72146b70-b66f-4f7a-babd-52e7f481fd9b"
-            },
-            "vertices": [
-              {
-                "x": 640,
-                "y": 160
+            "attrs": {
+              "text": {
+                "text": "serwis uwierzytelniania"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
-            ]
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1a5c2f20-86c6-4d6f-af59-01b8dd2f2118"
+                },
+                {
+                  "group": "right",
+                  "id": "471f60cd-0e78-4383-a2da-c3ddc1970ca5"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7c0ca4c2-330d-41ed-b682-18e30ff58da1"
+                },
+                {
+                  "group": "left",
+                  "id": "3904cbb4-b302-455f-9547-328b354c2acb"
+                }
+              ]
+            },
+            "id": "fc7198f9-2d9c-4f2d-bdaf-5b36ea12a170",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Process",
+              "name": "serwis uwierzytelniania",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 785,
+              "y": 275.0000000000002
+            },
+            "size": {
+              "width": 110,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "generator pdf"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1a5c2f20-86c6-4d6f-af59-01b8dd2f2118"
+                },
+                {
+                  "group": "right",
+                  "id": "471f60cd-0e78-4383-a2da-c3ddc1970ca5"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7c0ca4c2-330d-41ed-b682-18e30ff58da1"
+                },
+                {
+                  "group": "left",
+                  "id": "3904cbb4-b302-455f-9547-328b354c2acb"
+                }
+              ]
+            },
+            "id": "fb11fb8f-9f90-4d8f-872f-662a177231a2",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Process",
+              "name": "generator pdf",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 360,
+              "y": 0
+            },
+            "size": {
+              "width": 200,
+              "height": 170
+            },
+            "attrs": {
+              "text": {
+                "text": "Aplikacja bankowa frontend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1a5c2f20-86c6-4d6f-af59-01b8dd2f2118"
+                },
+                {
+                  "group": "right",
+                  "id": "471f60cd-0e78-4383-a2da-c3ddc1970ca5"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7c0ca4c2-330d-41ed-b682-18e30ff58da1"
+                },
+                {
+                  "group": "left",
+                  "id": "3904cbb4-b302-455f-9547-328b354c2acb"
+                }
+              ]
+            },
+            "id": "9a3681ba-831a-4bec-a8f2-8f2e7cc5bb2a",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Process",
+              "name": "Aplikacja bankowa frontend",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
           }
         ]
       }
