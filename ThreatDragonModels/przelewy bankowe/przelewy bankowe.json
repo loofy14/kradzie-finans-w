@@ -653,7 +653,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Odpowiedź API",
+              "name": "Przekazanie linku do pliku",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -667,7 +667,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Odpowiedź API"
+              "Przekazanie linku do pliku"
             ],
             "id": "9fe66fb2-1aa9-4f9f-8cc0-25c89113a30c",
             "source": {
